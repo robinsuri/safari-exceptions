@@ -16,6 +16,9 @@ public class UseSuperIterable {
         .map(s -> s.toUpperCase())
         .forEach(s -> System.out.println("> " + s));
 
-
+    SuperIterable<String> empty = new SuperIterable<>(Arrays.asList());
+    empty
+        .map(s -> s.toUpperCase())
+        .forEach(s -> System.out.println(s));
   }
 }

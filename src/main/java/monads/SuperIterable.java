@@ -15,7 +15,13 @@ public class SuperIterable<E> implements Iterable<E> {
   // Functor
   public <F> SuperIterable<F> map(Function<E, F> op) {
     List<F> res = new ArrayList<>();
-    self.forEach(e -> res.add(op.apply(e)));
+//    self.forEach(e -> res.add(op.apply(e)));
+    for (E e : self) {
+      F f = op.apply(e);
+      if (f != null) {
+        res.add(f);
+      }
+    }
     return new SuperIterable<>(res);
   }
 
