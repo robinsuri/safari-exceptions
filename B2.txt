@@ -1,0 +1,2 @@
+This is a fallback file,
+recovery for B, called B2
